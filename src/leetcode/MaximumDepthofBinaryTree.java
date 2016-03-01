@@ -41,7 +41,7 @@ class Solution{
     }
 }
 public class MaximumDepthofBinaryTree {
-    public static void main(String args []){
+    public static void main(String[] args ){
         TreeNode Tree = new TreeNode(2);
         Tree.left = new TreeNode(2);
         Tree.right = new TreeNode(2);

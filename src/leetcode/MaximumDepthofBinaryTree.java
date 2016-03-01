@@ -27,7 +27,7 @@ class TreeNode {
     }
 }
 
-class Solution{
+class Solution104{
     public int maxDepth(TreeNode root) {
         return helper(root, 0);
     }
@@ -46,7 +46,7 @@ public class MaximumDepthofBinaryTree {
         Tree.left = new TreeNode(2);
         Tree.right = new TreeNode(2);
         Tree.left.left = new TreeNode(2);
-        int depth = new Solution().maxDepth(Tree);
+        int depth = new Solution104().maxDepth(Tree);
         System.out.println(depth);
     }
 }

@@ -42,11 +42,11 @@ class Solution104{
 }
 public class MaximumDepthofBinaryTree {
     public static void main(String[] args ){
-        TreeNode Tree = new TreeNode(2);
-        Tree.left = new TreeNode(2);
-        Tree.right = new TreeNode(2);
-        Tree.left.left = new TreeNode(2);
-        int depth = new Solution104().maxDepth(Tree);
+        TreeNode Tree104 = new TreeNode(2);
+        Tree104.left = new TreeNode(2);
+        Tree104.right = new TreeNode(2);
+        Tree104.left.left = new TreeNode(2);
+        int depth = new Solution104().maxDepth(Tree104);
         System.out.println(depth);
     }
 }

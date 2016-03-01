@@ -20,8 +20,8 @@ class Solution217{
 }
 public class ContainsDuplicate {
     public static void main(String[] args ){
-        int[] num = {1,2};
-        boolean result = new Solution217().containsDuplicate(num);
+        int[] num217 = {1,2};
+        boolean result = new Solution217().containsDuplicate(num217);
         System.out.println(result);
     }
 }

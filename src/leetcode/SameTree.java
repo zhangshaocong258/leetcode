@@ -41,7 +41,7 @@ public class SameTree {
         Tree2.left = new TreeNode(2);
         Tree2.right = new TreeNode(2);
         Tree2.left.left = new TreeNode(2);
-        Tree2.right.left = new TreeNode(1);
+        Tree2.right.left = new TreeNode(2);
         boolean result = new Solution100().isSameTree(Tree1,Tree2);
         System.out.println(result);
     }

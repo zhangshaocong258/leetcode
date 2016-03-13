@@ -40,6 +40,7 @@ class Solution104{
         return Math.max(left,right);
     }
 }
+
 public class MaximumDepthofBinaryTree {
     public static void main(String[] args ){
         TreeNode Tree104 = new TreeNode(2);

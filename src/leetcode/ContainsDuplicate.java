@@ -18,6 +18,7 @@ class Solution217{
         return false;
     }
 }
+
 public class ContainsDuplicate {
     public static void main(String[] args ){
         int[] num217 = {1,2};

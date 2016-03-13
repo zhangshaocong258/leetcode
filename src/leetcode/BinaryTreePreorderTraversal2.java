@@ -40,7 +40,7 @@ public class BinaryTreePreorderTraversal2 {
         Tree144.left = new TreeNode(2);
         Tree144.right = new TreeNode(3);
         Tree144.left.left = new TreeNode(4);
-        List result = new Solution144().preorderTraversal(Tree144);
+        List result = new Solution144_2().preorderTraversal(Tree144);
         System.out.println(result);
     }
 }

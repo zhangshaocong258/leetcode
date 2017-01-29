@@ -16,6 +16,17 @@ import java.util.Stack;
  * 该方法模拟了递归的前序遍历中程序调用栈的行为过程：在调用栈中，会不断的递归进入左儿子链中，直到没有左儿子，再进入对右儿子的处理中。
  * 与递归方法的调用栈的不同之处在于，内层 while 循环将递归方法中针对左儿子链上所有节点的递归过程集中到了一起。
  */
+public class BinaryTreePreorderTraversal3 {
+    public static void main(String[] args) {
+        TreeNode Tree144 = new TreeNode(11);
+        Tree144.left = new TreeNode(2);
+        Tree144.right = new TreeNode(3);
+        Tree144.left.left = new TreeNode(4);
+        List result = new Solution144_3().preorderTraversal(Tree144);
+        System.out.println(result);
+    }
+}
+
 class Solution144_3 {
     public List<Integer> preorderTraversal(TreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
@@ -34,13 +45,4 @@ class Solution144_3 {
     }
 }
 
-public class BinaryTreePreorderTraversal3 {
-    public static void main(String[] args) {
-        TreeNode Tree144 = new TreeNode(11);
-        Tree144.left = new TreeNode(2);
-        Tree144.right = new TreeNode(3);
-        Tree144.left.left = new TreeNode(4);
-        List result = new Solution144_3().preorderTraversal(Tree144);
-        System.out.println(result);
-    }
-}
+

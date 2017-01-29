@@ -13,23 +13,6 @@ package leetcode;
  * TreeNode(int x) { val = x; }
  * }
  */
-
-
-class Solution100 {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-        if(p == null && q == null) return true;
-        if(p == null && q != null || p != null && q == null) return false;
-        if(p.val == q.val){
-            TreeNode p_left = p.left;
-            TreeNode q_left = q.left;
-            TreeNode p_right = p.right;
-            TreeNode q_right = q.right;
-            return isSameTree(p_left, q_left) && isSameTree(p_right, q_right);
-        }
-        else return false;
-    }
-}
-
 public class SameTree {
     public static void main(String[] args) {
         TreeNode Tree1 = new TreeNode(2);
@@ -46,3 +29,19 @@ public class SameTree {
         System.out.println(result);
     }
 }
+
+class Solution100 {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if(p == null && q == null) return true;
+        if(p == null && q != null || p != null && q == null) return false;
+        if(p.val == q.val){
+            TreeNode p_left = p.left;
+            TreeNode q_left = q.left;
+            TreeNode p_right = p.right;
+            TreeNode q_right = q.right;
+            return isSameTree(p_left, q_left) && isSameTree(p_right, q_right);
+        }
+        else return false;
+    }
+}
+

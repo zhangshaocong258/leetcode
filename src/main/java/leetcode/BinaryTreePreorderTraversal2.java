@@ -12,6 +12,16 @@ import java.util.Stack;
  * 先序遍历先对当前节点做出访问后，然后递归的调用对儿子节点的遍历，不需要在对儿子节点遍历结束后再回过头来处理当前节点。
  * 于是模拟的递归中也不需要存储之前的调用栈信息，只需要类似的生成一个未来的儿子节点的访问计划即可。
  */
+public class BinaryTreePreorderTraversal2 {
+    public static void main(String[] args) {
+        TreeNode Tree144 = new TreeNode(1);
+        Tree144.left = new TreeNode(2);
+        Tree144.right = new TreeNode(3);
+        Tree144.left.left = new TreeNode(4);
+        List result = new Solution144_2().preorderTraversal(Tree144);
+        System.out.println(result);
+    }
+}
 
 class Solution144_2 {
     public ArrayList<Integer> preorderTraversal(TreeNode root) {
@@ -34,13 +44,4 @@ class Solution144_2 {
         return list;
     }
 }
-public class BinaryTreePreorderTraversal2 {
-    public static void main(String[] args) {
-        TreeNode Tree144 = new TreeNode(1);
-        Tree144.left = new TreeNode(2);
-        Tree144.right = new TreeNode(3);
-        Tree144.left.left = new TreeNode(4);
-        List result = new Solution144_2().preorderTraversal(Tree144);
-        System.out.println(result);
-    }
-}
+

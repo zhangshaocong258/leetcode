@@ -15,15 +15,14 @@ package leetcode;
  *     TreeNode(int x) { val = x; }
  * }
  */
-
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
+public class MaximumDepthofBinaryTree {
+    public static void main(String[] args ){
+        TreeNode Tree104 = new TreeNode(2);
+        Tree104.left = new TreeNode(2);
+        Tree104.right = new TreeNode(2);
+        Tree104.left.left = new TreeNode(2);
+        int depth = new Solution104().maxDepth(Tree104);
+        System.out.println(depth);
     }
 }
 
@@ -41,15 +40,6 @@ class Solution104{
     }
 }
 
-public class MaximumDepthofBinaryTree {
-    public static void main(String[] args ){
-        TreeNode Tree104 = new TreeNode(2);
-        Tree104.left = new TreeNode(2);
-        Tree104.right = new TreeNode(2);
-        Tree104.left.left = new TreeNode(2);
-        int depth = new Solution104().maxDepth(Tree104);
-        System.out.println(depth);
-    }
-}
+
 
 

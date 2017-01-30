@@ -4,6 +4,8 @@ package leetcode;
  * Created by zsc on 2016/3/1.
  */
 
+import util.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {

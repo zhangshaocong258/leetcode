@@ -2,6 +2,7 @@ package base;
 
 /**
  * Created by zsc on 2017/2/3.
+ * 冒泡排序
  * 两次循环，外层n-1次，内层少i次，两两比较并交换
  */
 public class MaoPaoSort {

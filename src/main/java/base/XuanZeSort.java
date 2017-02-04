@@ -2,6 +2,7 @@ package base;
 
 /**
  * Created by zsc on 2017/2/3.
+ * 选择排序
  * 两次循环，外层n-1次，内层从外层后面一个开始，找到最小数的位置，与i比较并判断是否交换
  */
 public class XuanZeSort {

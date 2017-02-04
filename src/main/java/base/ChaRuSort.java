@@ -2,6 +2,7 @@ package base;
 
 /**
  * Created by zsc on 2017/2/3.
+ * 插入排序
  * 两次循环，外层n-1次，内层从后往前比较，大于target则后移，最终确定插入位置
  *
  */

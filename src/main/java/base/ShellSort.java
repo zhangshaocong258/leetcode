@@ -2,6 +2,8 @@ package base;
 
 /**
  * Created by zsc on 2017/2/4.
+ * 希尔排序
+ * 讲插入排序中的1改为d
  */
 public class ShellSort {
 
@@ -10,6 +12,16 @@ public class ShellSort {
         shellSort(a);
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);
+        }
+    }
+
+    public static void shellSort(int[] a) {
+        if (a == null || a.length == 0)
+            return;
+        int d = a.length / 2;
+        while (d >= 1) {
+            shellInsert(a, d);
+            d /= 2;
         }
     }
 
@@ -29,13 +41,4 @@ public class ShellSort {
         }
     }
 
-    public static void shellSort(int[] a) {
-        if (a == null || a.length == 0)
-            return;
-        int d = a.length / 2;
-        while (d >= 1) {
-            shellInsert(a, d);
-            d /= 2;
-        }
-    }
 }

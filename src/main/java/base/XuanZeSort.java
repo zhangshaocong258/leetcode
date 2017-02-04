@@ -23,11 +23,15 @@ public class XuanZeSort {
                 }
             }
             if (minIndex != i) {
-                int temp = a[i];
-                a[i] = a[minIndex];
-                a[minIndex] = temp;
+                swap(a, i, minIndex);
             }
         }
+    }
+
+    private static void swap(int[] a, int i, int j) {
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
     }
 }
 

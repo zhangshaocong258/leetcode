@@ -16,13 +16,14 @@ public class ChaRuSort {
     private static void sort(int[] a, int n) {
         for (int i = 1; i < n; i++) {
             if (a[i] < a[i - 1]) {
-                int j = i;
+                int j = i - 1;
                 int target = a[i];
-                while (j > 0 && target < a[j - 1]) {
-                    a[j] = a[j - 1];
+                a[i] = a[i - 1];
+                while (j >= 0 && target < a[j]) {
+                    a[j + 1] = a[j];
                     j--;
                 }
-                a[j] = target;
+                a[j + 1] = target;
             }
         }
     }

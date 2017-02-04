@@ -6,7 +6,7 @@ package base;
  */
 public class XuanZeSort {
     public static void main(String args[]) {
-        int[] a = {2, 3, 1, 5, 8, 4, 6};
+        int[] a = {49, 38, 65, 97, 76, 13, 27, 49, 55, 4};
         sort(a, a.length);
         for (int i = 0; i < a.length; i++) {
             System.out.println(a[i]);

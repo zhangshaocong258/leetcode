@@ -1,5 +1,6 @@
 package sort;
 
+import java.util.LinkedList;
 import java.util.Stack;
 
 /**
@@ -22,10 +23,10 @@ public class KuaiSuSort2 {
         if (a == null || a.length == 0){
             return;
         }
-        Stack<Integer> stack = new Stack<Integer>();
+        LinkedList<Integer> stack = new LinkedList<Integer>();
         stack.push(0);
         stack.push(a.length - 1);
-        while (!stack.empty()) {
+        while (!stack.isEmpty()) {
             int right = stack.pop();
             int left = stack.pop();
             //如果最大索引小于等于左边索引，说明结束了

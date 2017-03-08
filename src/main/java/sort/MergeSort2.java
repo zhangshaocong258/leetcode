@@ -1,9 +1,9 @@
 package sort;
 
-import java.util.Stack;
 
 /**
  * Created by zsc on 2017/2/13.
+ * 非递归归并排序
  */
 public class MergeSort2 {
     public static void main(String args[]) {
@@ -18,37 +18,24 @@ public class MergeSort2 {
         if (a == null || a.length == 0){
             return;
         }
-        Stack<Integer> stack = new Stack<Integer>();
-        stack.push(0);
-        stack.push(a.length - 1);
-        while (!stack.empty()) {
-            int right = stack.pop();
-            int left = stack.pop();
-            //如果最大索引小于等于左边索引，说明结束了
-            if (left >= right) {
-                continue;
-            }
-            int mid = (left + right) / 2;
-            merge(a, left, mid, right);
+        int len = 1;
 
-            if (left < mid) {
-                stack.push(left);
-                stack.push(mid);
+        while (len < a.length) {
+            for (int i = 0; i < a.length; i += 2 * len) {
+                merge(a, i, len);
             }
-
-            if (mid + 1 < right) {
-                stack.push(mid + 1);
-                stack.push(right);
-            }
+            len *= 2;
         }
     }
 
-    private static void merge(int[] a, int left, int mid, int right) {
-        int[] temp = new int[right - left + 1];
-        int i = left;
-        int j = mid + 1;
+    private static void merge(int[] a, int i, int len) {
+        int[] temp = new int[len * 2];
+        int start = i;
+        int mid = i + len;
+        int j = i + len;
+        int end = j + len;
         int k = 0;
-        while (i <= mid && j <= right) {
+        while (i < mid && j < end && j < a.length) {
             if (a[i] <= a[j]) {
                 temp[k++] = a[i++];
             } else {
@@ -56,16 +43,29 @@ public class MergeSort2 {
             }
         }
 
-        while (i <= mid) {
+        while (i < mid && i < a.length) {
             temp[k++] = a[i++];
         }
 
-        while (j <= right) {
+        while (j < end & j < a.length) {
             temp[k++] = a[j++];
         }
 
-        for (int p = 0; p < temp.length; p++) {
-            a[left + p] = temp[p];
+        k = 0;
+        while(start < j && start < a.length){
+            a[start++] = temp[k++];
         }
+
+        //start + p超过数组大小，报错
+        /*for (int p = 0; (p < temp.length ); p++) {
+            try {
+                a[start + p] = temp[p];
+            } catch (Exception e) {
+                System.out.println(" sta " + start + " p " + p + "  tt " + temp.length);
+
+                e.printStackTrace();
+                System.exit(0);
+            }
+        }*/
     }
 }

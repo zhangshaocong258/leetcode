@@ -4,6 +4,11 @@ import java.util.*;
 
 /**
  * Created by zsc on 2017/1/30.
+ * 找最长不重复子串
+ * "abcabcbb" -> "abc"
+ * "bbbbb" -> "b"
+ * "pwwkew" -> "wke"
+ *
  */
 public class LongestSubstringWithoutRepeatingCharacters {
     public static void main(String args[]) {

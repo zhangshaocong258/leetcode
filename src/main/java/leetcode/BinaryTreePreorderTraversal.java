@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by zsc on 2016/3/1.
+ * 递归先序遍历
  */
 public class BinaryTreePreorderTraversal {
     public static void main(String[] args) {

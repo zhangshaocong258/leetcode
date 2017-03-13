@@ -2,6 +2,7 @@ package leetcode;
 
 /**
  * Created by zsc on 2017/1/30.
+ * 求两个数相加等于一个数
  */
 public class TwoSum {
     public static void main(String args[]) {

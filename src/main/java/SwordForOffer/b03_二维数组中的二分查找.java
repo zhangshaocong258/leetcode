@@ -1,4 +1,4 @@
-package offer;
+package SwordForOffer;
 
 /**
  * Created by zsc on 2017/3/16.
@@ -7,7 +7,7 @@ package offer;
  * 一个二维数组，每一行从左到右递增，每一列从上到下递增．
  * 输入一个二维数组和一个整数，判断数组中是否含有整数
  */
-public class FindKeyInArray {
+public class b03_二维数组中的二分查找 {
     public static void main(String args[]) {
         int[][] testarray = new int[4][4];
         testarray[0][0] = 1;

@@ -18,6 +18,23 @@ public class BinaryTreeInorderTraversal {
         List result = new Solution99().inorderTraversal(Tree99);
         System.out.println(result);
     }
+
+    //用于输出二叉树终须遍历
+    public static ArrayList<Integer> inorderTraversal(TreeNode root) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        if (root == null)
+            return list;
+        helper(root, list);
+        return list;
+    }
+
+    public static void helper(TreeNode root, ArrayList<Integer> list) {
+        if (root != null) {
+            helper(root.left, list);
+            list.add(root.val);
+            helper(root.right, list);
+        }
+    }
 }
 
 class Solution99 {

@@ -18,6 +18,23 @@ public class BinaryTreePreorderTraversal {
         List result = new Solution144().preorderTraversal(Tree144);
         System.out.println(result);
     }
+
+    //用于输出二叉树先序遍历
+    public static ArrayList<Integer> preorderTraversal(TreeNode root) {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        if (root == null)
+            return list;
+        helper(root, list);
+        return list;
+    }
+
+    public static void helper(TreeNode root, ArrayList<Integer> list) {
+        if (root != null) {
+            list.add(root.val);
+            helper(root.left, list);
+            helper(root.right, list);
+        }
+    }
 }
 
 class Solution144 {

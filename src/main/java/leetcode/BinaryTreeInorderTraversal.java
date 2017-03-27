@@ -17,6 +17,7 @@ public class BinaryTreeInorderTraversal {
         Tree99.left.left = new TreeNode(4);
         List result = new Solution99().inorderTraversal(Tree99);
         System.out.println(result);
+
     }
 
     //用于输出二叉树终须遍历

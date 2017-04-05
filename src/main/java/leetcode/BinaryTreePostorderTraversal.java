@@ -1,6 +1,6 @@
 package leetcode;
 
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,17 +11,17 @@ import java.util.List;
  */
 public class BinaryTreePostorderTraversal {
     public static void main(String[] args) {
-        TreeNode Tree145 = new TreeNode(8);
-        Tree145.left = new TreeNode(2);
-        Tree145.right = new TreeNode(3);
-        Tree145.left.left = new TreeNode(4);
+        BinaryTreeNode Tree145 = new BinaryTreeNode(8);
+        Tree145.left = new BinaryTreeNode(2);
+        Tree145.right = new BinaryTreeNode(3);
+        Tree145.left.left = new BinaryTreeNode(4);
         List result = new Solution145().postorderTraversal(Tree145);
         System.out.println(result);
     }
 }
 
 class Solution145 {
-    public ArrayList<Integer> postorderTraversal(TreeNode root) {
+    public ArrayList<Integer> postorderTraversal(BinaryTreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
         if (root == null)
             return list;
@@ -29,11 +29,11 @@ class Solution145 {
         return list;
     }
 
-    public void helper(TreeNode root, ArrayList<Integer> list) {
+    public void helper(BinaryTreeNode root, ArrayList<Integer> list) {
         if (root != null) {
             helper(root.left, list);
             helper(root.right, list);
-            list.add(root.val);
+            list.add(root.value);
         }
     }
 }

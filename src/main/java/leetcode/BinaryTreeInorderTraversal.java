@@ -1,6 +1,6 @@
 package leetcode;
 
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,17 +11,17 @@ import java.util.List;
  */
 public class BinaryTreeInorderTraversal {
     public static void main(String[] args) {
-        TreeNode Tree99 = new TreeNode(1);
-        Tree99.left = new TreeNode(2);
-        Tree99.right = new TreeNode(3);
-        Tree99.left.left = new TreeNode(4);
+        BinaryTreeNode Tree99 = new BinaryTreeNode(1);
+        Tree99.left = new BinaryTreeNode(2);
+        Tree99.right = new BinaryTreeNode(3);
+        Tree99.left.left = new BinaryTreeNode(4);
         List result = new Solution99().inorderTraversal(Tree99);
         System.out.println(result);
 
     }
 
     //用于输出二叉树终须遍历
-    public static ArrayList<Integer> inorderTraversal(TreeNode root) {
+    public static ArrayList<Integer> inorderTraversal(BinaryTreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
         if (root == null)
             return list;
@@ -29,17 +29,17 @@ public class BinaryTreeInorderTraversal {
         return list;
     }
 
-    public static void helper(TreeNode root, ArrayList<Integer> list) {
+    public static void helper(BinaryTreeNode root, ArrayList<Integer> list) {
         if (root != null) {
             helper(root.left, list);
-            list.add(root.val);
+            list.add(root.value);
             helper(root.right, list);
         }
     }
 }
 
 class Solution99 {
-    public ArrayList<Integer> inorderTraversal(TreeNode root) {
+    public ArrayList<Integer> inorderTraversal(BinaryTreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
         if (root == null)
             return list;
@@ -47,10 +47,10 @@ class Solution99 {
         return list;
     }
 
-    public void helper(TreeNode root, ArrayList<Integer> list) {
+    public void helper(BinaryTreeNode root, ArrayList<Integer> list) {
         if (root != null) {
             helper(root.left, list);
-            list.add(root.val);
+            list.add(root.value);
             helper(root.right, list);
         }
     }

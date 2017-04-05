@@ -1,6 +1,6 @@
 package leetcode;
 
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,26 +16,26 @@ import java.util.Stack;
  */
 public class BinaryTreePreorderTraversal2 {
     public static void main(String[] args) {
-        TreeNode Tree144 = new TreeNode(1);
-        Tree144.left = new TreeNode(2);
-        Tree144.right = new TreeNode(3);
-        Tree144.left.left = new TreeNode(4);
+        BinaryTreeNode Tree144 = new BinaryTreeNode(1);
+        Tree144.left = new BinaryTreeNode(2);
+        Tree144.right = new BinaryTreeNode(3);
+        Tree144.left.left = new BinaryTreeNode(4);
         List result = new Solution144_2().preorderTraversal(Tree144);
         System.out.println(result);
     }
 }
 
 class Solution144_2 {
-    public ArrayList<Integer> preorderTraversal(TreeNode root) {
+    public ArrayList<Integer> preorderTraversal(BinaryTreeNode root) {
         ArrayList<Integer> list = new ArrayList<Integer>();
         if (root == null)
             return null;
 
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
         stack.add(root);
         while (!stack.isEmpty()) {
-            TreeNode node = stack.pop();
-            list.add(node.val);
+            BinaryTreeNode node = stack.pop();
+            list.add(node.value);
             // right node add in stack first
             if (node.right != null)
                 stack.push(node.right);

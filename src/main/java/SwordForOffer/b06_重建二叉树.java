@@ -2,7 +2,7 @@ package SwordForOffer;
 
 import leetcode.BinaryTreeInorderTraversal;
 import leetcode.BinaryTreePreorderTraversal;
-import util.TreeNode;
+import util.BinaryTreeNode;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ public class b06_重建二叉树 {
     public static void main(String args[]) {
         int[] pre = {1, 2, 4, 7, 3, 5, 6, 8};
         int[] in = {4, 7, 2, 1, 5, 3, 8, 6};
-        TreeNode node = constructCore(pre, in);
+        BinaryTreeNode node = constructCore(pre, in);
 
         List result1 = BinaryTreePreorderTraversal.preorderTraversal(node);
         List result2 = BinaryTreeInorderTraversal.inorderTraversal(node);
@@ -27,11 +27,11 @@ public class b06_重建二叉树 {
 
     }
 
-    private static TreeNode constructCore(int[] pre, int[] in) {
+    private static BinaryTreeNode constructCore(int[] pre, int[] in) {
         if (pre.length == 0 || in.length == 0) {
             return null;
         }
-        TreeNode node = new TreeNode(pre[0]);//得到根节点
+        BinaryTreeNode node = new BinaryTreeNode(pre[0]);//得到根节点
         int[] lPre;
         int[] lIn;
         int[] rPre;

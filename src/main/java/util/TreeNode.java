@@ -1,14 +1,24 @@
 package util;
 
+import java.util.LinkedList;
+import java.util.List;
+
 /**
- * Created by zsc on 2017/1/29.
+ * Created by zsc on 2017/4/1.
  */
 public class TreeNode {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode(){}
-    public TreeNode(int x) {
-        val = x;
+    public int value;
+    public List<TreeNode> children = new LinkedList<>();
+
+    public TreeNode() {
+    }
+
+    public TreeNode(int value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return value + "";
     }
 }

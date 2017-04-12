@@ -7,9 +7,9 @@ import java.util.List;
  * Created by zsc on 2017/2/10.
  * 基数排序
  * 相对于桶排序，没有Collections.sort
+ * 先排低位，再排高位
  */
 public class RadixSort {
-
 
     public static void main(String args[]) {
         int[] a = {278, 109, 63, 30, 589, 184, 505, 269, 8, 83};

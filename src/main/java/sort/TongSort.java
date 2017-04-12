@@ -30,7 +30,7 @@ public class TongSort {
 
         //向每个桶添加元素
         for (int i = 0; i < a.length; i++) {
-            tongs.get(f(a[i])).add(a[i]);
+            tongs.get(hash(a[i])).add(a[i]);
         }
 
         //对每个桶中的元素排序
@@ -49,7 +49,7 @@ public class TongSort {
 
     }
 
-    private static int f(int a) {
+    private static int hash(int a) {
         return a / 10;
 
     }

@@ -90,6 +90,7 @@ public class MakeChange {
         //可以装前count个硬币时，总钱数小于aim时的种数
         int dp[][] = new int[count + 1][aim + 1];
 
+        //当aim为0时，只有一个都不取这一种
         for (int col = 0; col < count + 1; col++) {
             dp[col][0] = 1;
         }

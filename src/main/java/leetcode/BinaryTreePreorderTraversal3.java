@@ -35,13 +35,15 @@ class Solution144_3 {
         Stack<BinaryTreeNode> stack = new Stack<BinaryTreeNode>();
         BinaryTreeNode node = root;
         while (!stack.isEmpty() || node != null) {
-            while (node != null) {
+            if (node != null) {
                 list.add(node.value);
                 stack.push(node);
                 node = node.left;
+            } else {
+                node = stack.pop();
+                node = node.right;
             }
-            node = stack.pop();
-            node = node.right;
+
         }
         return list;
     }

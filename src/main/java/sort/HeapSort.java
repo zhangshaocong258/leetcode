@@ -37,7 +37,6 @@ public class HeapSort {
     private static void sort(int[] arr) {
         if (arr == null || arr.length == 0)
             return;
-
         //建立大顶堆
         for (int i = (arr.length - 1) / 2; i >= 0; i--) {
             heapAdjust(arr, i, arr.length - 1);
@@ -59,7 +58,6 @@ public class HeapSort {
             swap(arr, 0, i);
             heapAdjust(arr, 0, i - 1);
         }
-
     }
 
 

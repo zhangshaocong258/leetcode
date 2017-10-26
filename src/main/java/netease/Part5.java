@@ -6,7 +6,6 @@ import java.util.Scanner;
  * Created by zsc on 2017/8/13.
  * Part4动态规划方法
  * dp[n+1][k+1]表示长度为n时，最后一个数为k是符合要求数的个数
- * 用java还是超时
  */
 public class Part5 {
     static int n;

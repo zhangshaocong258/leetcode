@@ -8,6 +8,11 @@ import java.util.List;
  * 基数排序
  * 相对于桶排序，没有Collections.sort
  * 先排低位，再排高位
+ * 基数r代表队列，0-10
+ * d代表位数，3
+ * n代表个数，10+
+ * 时间复杂度O(d(n+r))
+ * 空间复杂度O(rd)
  */
 public class RadixSort {
 

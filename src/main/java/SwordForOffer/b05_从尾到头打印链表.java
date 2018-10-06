@@ -30,7 +30,7 @@ public class b05_从尾到头打印链表 {
         }
 
         while (!stack.isEmpty()) {
-            System.out.println(stack.pop().data);
+            System.out.println(stack.pop().val);
         }
     }
 }

@@ -5,9 +5,9 @@ package util;
  * 链表
  */
 public class ListNode {
-    public ListNode(int data) {
-        this.data = data;
+    public ListNode(int val) {
+        this.val = val;
     }
-    public int data;
+    public int val;
     public ListNode next;
 }

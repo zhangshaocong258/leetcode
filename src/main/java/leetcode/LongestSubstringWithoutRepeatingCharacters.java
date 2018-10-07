@@ -8,7 +8,6 @@ import java.util.*;
  * "abcabcbb" -> "abc"
  * "bbbbb" -> "b"
  * "pwwkew" -> "wke"
- *
  */
 public class LongestSubstringWithoutRepeatingCharacters {
     public static void main(String args[]) {
@@ -43,6 +42,31 @@ class solution3 {
         }
         if (result < j - i) {
             result = j - i;
+        }
+        return result;
+    }
+
+    /**
+     * index表示没有重复字符的最长子字符串的起始索引，i表示当前位置
+     *
+     * @param s 字符串
+     * @return 长度
+     */
+    public int lengthOfLongestSubstring2(String s) {
+        if (s.length() == 0) {
+            return 0;
+        }
+        char[] arrays = s.toCharArray();
+        int result = 0;
+        int index = 0;
+        Map<Character, Integer> hashMap = new HashMap<Character, Integer>();
+        for (int i = 0; i < arrays.length; i++) {
+            if (hashMap.containsKey(arrays[i])) {
+                index = Math.max(index, hashMap.get(arrays[i]) + 1);
+                hashMap.put(arrays[i], i);
+            }
+            result = Math.max(result, i - index + 1);
+            hashMap.put(arrays[i], i);
         }
         return result;
     }
